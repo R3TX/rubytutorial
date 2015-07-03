@@ -5,3 +5,7 @@
 
 # You can also remove all the silencers if you're trying to debug a problem that might stem from framework code.
 # Rails.backtrace_cleaner.remove_silencers!
+
+#impide q el log muestre errores mas atras de donde le corresponde
+#es decir mas alla de la app
+Rails.backtrace_cleaner.add_silencer { |line| line =~ /rvm/ }
