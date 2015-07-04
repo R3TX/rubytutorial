@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.8'
+
+
 #encriota claves
 gem 'bcrypt-ruby', '~> 3.1.5'
 #gem 'bcrypt', '3.1.7'
@@ -26,6 +28,10 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
+  #webserver suitable for production applications good at handling significant traffic
+  gem 'puma',           '2.11.1'
+  
+
 end
 group :test do
   gem 'minitest-reporters', '1.0.5'
